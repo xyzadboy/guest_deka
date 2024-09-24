@@ -20,6 +20,8 @@ class TamuResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationLabel = 'Tamu';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -47,7 +49,7 @@ class TamuResource extends Resource
                 Tables\Columns\TextColumn::make('no')->label('Phone Number'),
                 Tables\Columns\TextColumn::make('alamat')->label('Address'),
                 Tables\Columns\TextColumn::make('gender')->label('Gender'),
-                Tables\Columns\TextColumn::make('created_at')->label('Tanggal')->date(),
+                Tables\Columns\TextColumn::make('created_at')->label('Tanggal')->date()->sortable(),
             ])
             ->filters([
                 SelectFilter::make('gender')
@@ -55,8 +57,8 @@ class TamuResource extends Resource
                         'laki-laki' => 'Laki-laki',
                         'perempuan' => 'Perempuan',
                     ]),
-                    
-                   
+
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
