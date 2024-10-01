@@ -17,6 +17,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use App\Filament\Resources\TamuResource\Widgets\TamuOverview;
+
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -42,6 +44,8 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
+                TamuOverview::class,
+
             ])
             ->middleware([
                 EncryptCookies::class,

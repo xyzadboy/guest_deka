@@ -17,11 +17,11 @@ class Tamu extends Model
         return $this->belongsTo(Tamu::class);
     }
 
-    // Tambahkan 'name' ke dalam properti fillable untuk memungkinkan mass assignment
     protected $fillable = [
         'name',
         'no',
         'alamat',
+        'feedback',
         'gender',
     ];
 }

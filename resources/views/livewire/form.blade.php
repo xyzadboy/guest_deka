@@ -10,19 +10,24 @@
 
         <form wire:submit.prevent="save" class="space-y-4">
             <div>
-                <label for="name" class="block text-sm font-medium text-white">Name</label>
+                <label for="name" class="block text-sm font-medium text-white">Name</label><br>
                 <input type="text" wire:model="name" id="name" placeholder="Enter your name"
                 class="w-full px-4 py-2 leading-tight text-white bg-[#20242B] border-2  rounded-full appearance-none focus:outline-none focus:bg-[#20242B] focus:border-[#5E6DFF]">
             </div>
             <div>
-                <label for="no" class="block text-sm font-medium text-white">Phone Number</label>
+                <label for="no" class="block text-sm font-medium text-white">Phone Number</label><br>
                 <input type="text" wire:model="no" id="no" placeholder="Enter your number"
                 class="w-full px-4 py-2 leading-tight text-white bg-[#20242B] border-2  rounded-full appearance-none focus:outline-none focus:bg-[#20242B] focus:border-[#5E6DFF]">
             </div>
             <div>
-                <label for="alamat" class="block text-sm font-medium text-white">Address</label>
+                <label for="alamat" class="block text-sm font-medium text-white">Address</label><br>
                 <input type="text" wire:model="alamat" id="alamat" placeholder="Enter your address"
                 class="w-full px-4 py-2 leading-tight text-white bg-[#20242B] border-2 rounded-full appearance-none focus:outline-none focus:bg-[#20242B] focus:border-[#5E6DFF]">
+            </div>
+            <div>
+                <label for="feedback" class="block text-sm font-medium text-white">Feedback</label><br>
+                <textarea wire:model="feedback" id="feedback" placeholder="Enter your feedback"
+                class="w-full px-4 py-2 leading-tight text-white bg-[#20242B] border-2 rounded-lg appearance-none focus:outline-none focus:bg-[#20242B] focus:border-[#5E6DFF]" rows="3"></textarea>
             </div>
 
             <label for="gender" class="block text-sm font-medium text-white">Gender</label>

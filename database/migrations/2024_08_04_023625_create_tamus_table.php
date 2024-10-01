@@ -14,6 +14,7 @@ class CreateTamusTable extends Migration
             $table->string('no');
             $table->string('gender');
             $table->string('alamat');
+            $table->string('feedback')->nullable();
             $table->timestamps();
         });
     }
