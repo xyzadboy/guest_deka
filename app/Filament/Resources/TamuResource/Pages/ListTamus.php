@@ -10,6 +10,12 @@ class ListTamus extends ListRecords
 {
     protected static string $resource = TamuResource::class;
 
+    // Mengubah heading menjadi "Tamu"
+    public function getTitle(): string
+    {
+        return 'Tamu';
+    }
+
     protected function getHeaderActions(): array
     {
         return [
