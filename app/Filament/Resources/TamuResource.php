@@ -20,7 +20,17 @@ class TamuResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static ?string $navigationLabel = 'Tamu';
+
+    public static function getPluralLabel(): string
+    {
+        return 'Tamu'; // Ubah label jamak di sini
+    }
+
+    public static function getSlug(): string
+{
+    return 'tamu'; // Mengatur slug tanpa "s" di URL
+}
+
 
     public static function form(Form $form): Form
     {

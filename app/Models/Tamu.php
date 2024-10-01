@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Tamu extends Model
 {
     use HasFactory;
+    protected $table = 'tamu'; // Nama tabel yang benar
 
     // Definisikan relasi belongsTo
     public function tamu(): BelongsTo

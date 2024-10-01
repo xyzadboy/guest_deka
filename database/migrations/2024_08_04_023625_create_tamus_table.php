@@ -8,13 +8,12 @@ class CreateTamusTable extends Migration
 {
     public function up()
     {
-        Schema::create('tamus', function (Blueprint $table) {
+        Schema::create('tamu', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('no');
             $table->string('gender');
-            
-
+            $table->string('alamat');
             $table->timestamps();
         });
     }
